@@ -1,5 +1,5 @@
-require('dotenv').config();
-import Sequelize from 'sequelize';
+require("dotenv").config();
+import Sequelize from "sequelize";
 
 module.exports = new Sequelize(
   process.env.DB_NAME,
@@ -15,5 +15,5 @@ module.exports = new Sequelize(
       acquire: 30000,
       idle: 10000
     }
-  },
+  }
 );
