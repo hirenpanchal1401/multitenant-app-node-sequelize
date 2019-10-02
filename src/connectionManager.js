@@ -19,7 +19,6 @@ export const connectAllDb = async () => {
         console.error("Unable to connect to the database:", err);
       });
     tenants = await commonDBConnection.query("SELECT * FROM tenants");
-    console.log("xxxxx");
   } catch (e) {
     console.log("error", e);
     return;
@@ -46,8 +45,6 @@ export const connectAllDb = async () => {
     return Object.assign({}, prev, next);
   }, {});
 };
-
-console.log("connectionMap", connectionMap);
 
 export const allConnection = Object.keys(connectionMap).length
   ? connectionMap

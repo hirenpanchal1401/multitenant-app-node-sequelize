@@ -58,7 +58,6 @@ const connectionPool = async () => {
 connectionPool();
 
 export const getConnection = slug => {
-  console.log(Object.keys(allConnectionPool));
   if (allConnectionPool[slug]) {
     return allConnectionPool[slug];
   } else {
